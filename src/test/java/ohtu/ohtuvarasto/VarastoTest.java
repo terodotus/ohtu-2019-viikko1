@@ -15,6 +15,7 @@ public class VarastoTest {
     Varasto varasto;
     Varasto varasto2;
     Varasto varasto3;
+    Varasto varasto4;
     double vertailuTarkkuus = 0.0001;
 
     @Before
@@ -22,11 +23,22 @@ public class VarastoTest {
         varasto = new Varasto(10);
         varasto2=new Varasto(-100);
         varasto3=new Varasto(0,100);
+        varasto4=new Varasto(10,10);
     }
 
     @Test
     public void konstruktoriLuoTyhjanVaraston() {
         assertEquals(0, varasto.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void konstruktoriLuoTyhjanVaraston2() {
+        assertEquals(0, varasto2.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void konstruktoriLuoTyhjanVaraston3() {
+        assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
     }
 
     @Test
