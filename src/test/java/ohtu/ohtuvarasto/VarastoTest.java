@@ -13,11 +13,15 @@ import static org.junit.Assert.*;
 public class VarastoTest {
 
     Varasto varasto;
+    Varasto varasto2;
+    Varasto varasto3;
     double vertailuTarkkuus = 0.0001;
 
     @Before
     public void setUp() {
         varasto = new Varasto(10);
+        varasto2=new Varasto(-100);
+        varasto3=new Varasto(0,100);
     }
 
     @Test
@@ -75,6 +79,16 @@ public class VarastoTest {
     public void laitetaanLiikaa() {
         varasto.lisaaVarastoon(varasto.getTilavuus()+100);
         assertEquals(varasto.getSaldo(), varasto.getTilavuus(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void konstruktoriJosNegatiivinenLuoTyhjan() {
+        assertEquals(0, varasto2.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void konstruktoriJosTilavuusNollaLuoTyhjan() {
+        assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
     }
     
 
