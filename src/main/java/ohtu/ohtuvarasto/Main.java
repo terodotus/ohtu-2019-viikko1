@@ -17,7 +17,7 @@ public class Main {
         System.out.println("paljonkoMahtuu = " + olutta.paljonkoMahtuu());
 
         System.out.println("Mehusetterit:");
-        System.out.println("Lisätään 50.7");
+        System.out.println("Lisataan 50.7");
         mehua.lisaaVarastoon(50.7);
         System.out.println("Mehuvarasto: " + mehua);
         System.out.println("Otetaan 3.14");
