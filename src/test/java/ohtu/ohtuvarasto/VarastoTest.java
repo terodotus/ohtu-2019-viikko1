@@ -133,5 +133,10 @@ public class VarastoTest {
     public void negatiivinenAlkusaldoNollaantuu() {
         assertEquals(0, varasto5.getSaldo(), vertailuTarkkuus);
     }
+    
+    @Test
+    public void stringToimii() {
+        assertEquals("saldo = 0, viela tilaa 0", varasto3.toString());
+    }
 
 }
