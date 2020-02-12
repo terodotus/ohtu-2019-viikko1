@@ -16,6 +16,7 @@ public class VarastoTest {
     Varasto varasto2;
     Varasto varasto3;
     Varasto varasto4;
+    Varasto varasto5;
     double vertailuTarkkuus = 0.0001;
 
     @Before
@@ -23,7 +24,8 @@ public class VarastoTest {
         varasto = new Varasto(10);
         varasto2=new Varasto(-100);
         varasto3=new Varasto(0,100);
-        varasto4=new Varasto(10,10);
+        varasto4=new Varasto(5,10);
+        varasto5=new Varasto(5,-10);
     }
 
     @Test
@@ -119,6 +121,17 @@ public class VarastoTest {
     public void palautetaanArvot2() {
         varasto2.lisaaVarastoon(10);
         assertEquals(0, varasto2.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void liianPieniVarasto() {
+        varasto2.lisaaVarastoon(10);
+        assertEquals(5, varasto4.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void negatiivinenAlkusaldoNollaantuu() {
+        assertEquals(0, varasto5.getSaldo(), vertailuTarkkuus);
     }
 
 }
