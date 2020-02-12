@@ -93,8 +93,20 @@ public class VarastoTest {
     
     @Test
     public void lisataanNegatiivinen() {
-        varasto2.lisaaVarastoon(-1000);
+        varasto3.lisaaVarastoon(-1000);
         assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void palautetaanArvot() {
+        varasto3.lisaaVarastoon(10);
+        assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
+    }
+    
+    @Test
+    public void palautetaanArvot2() {
+        varasto2.lisaaVarastoon(10);
+        assertEquals(0, varasto2.getSaldo(), vertailuTarkkuus);
     }
 
 }
