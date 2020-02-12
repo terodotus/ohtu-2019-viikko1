@@ -8,12 +8,6 @@
 
 apply plugin: "jacoco"
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
-    }
-}
-
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
@@ -21,6 +15,7 @@ apply plugin: 'java'
 apply plugin: 'application'
 
 // In this section you declare where to find the dependencies of your project
+
 repositories {
     // Use jcenter for resolving your dependencies.
     // You can declare any Maven/Ivy/file repository here.
@@ -44,5 +39,13 @@ jacocoTestReport {
         html.enabled true
     }
 }
+
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
+    }
+}
+
 
 
