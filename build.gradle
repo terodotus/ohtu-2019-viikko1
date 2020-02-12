@@ -6,6 +6,8 @@
  * user guide available at https://guides.gradle.org/creating-new-gradle-builds/
  */
 
+apply plugin: "jacoco"
+
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
@@ -36,4 +38,5 @@ jacocoTestReport {
         html.enabled true
     }
 }
+
 
