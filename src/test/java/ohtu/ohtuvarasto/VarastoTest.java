@@ -91,5 +91,10 @@ public class VarastoTest {
         assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
     }
     
+    @Test
+    public void lisataanNegatiivinen() {
+        varasto2.lisaaVarastoon(-1000);
+        assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
+    }
 
 }
