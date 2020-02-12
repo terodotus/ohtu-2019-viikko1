@@ -8,6 +8,12 @@
 
 apply plugin: "jacoco"
 
+jar {
+    manifest {
+        attributes 'Main-Class': 'ohtu.ohtuvarasto.Main'
+    }
+}
+
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
