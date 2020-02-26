@@ -17,6 +17,7 @@ public class VarastoTest {
     Varasto varasto3;
     Varasto varasto4;
     Varasto varasto5;
+    Varasto varasto6;
     double vertailuTarkkuus = 0.0001;
 
     @Before
@@ -26,6 +27,7 @@ public class VarastoTest {
         varasto3=new Varasto(0,100);
         varasto4=new Varasto(5,10);
         varasto5=new Varasto(5,-10);
+        varasto6=new Varasto(-5,-1);
     }
 
     @Test
@@ -42,6 +44,11 @@ public class VarastoTest {
     public void konstruktoriLuoTyhjanVaraston3() {
         assertEquals(0, varasto3.getSaldo(), vertailuTarkkuus);
     }
+    
+    @Test
+    public void konstruktoriLuoTyhjanVaraston4() {
+        assertEquals(0, varasto6.getSaldo(), vertailuTarkkuus);
+    }
 
     @Test
     public void uudellaVarastollaOikeaTilavuus() {
@@ -55,6 +62,8 @@ public class VarastoTest {
         // saldon pitäisi olla sama kun lisätty määrä
         assertEquals(8, varasto.getSaldo(), vertailuTarkkuus);
     }
+    
+    
 
     @Test
     public void lisaysLisaaPienentaaVapaataTilaa() {
