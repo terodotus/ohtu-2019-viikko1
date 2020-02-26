@@ -5,6 +5,11 @@
  * For more details take a look at the Java Quickstart chapter in the Gradle
  * user guide available at https://guides.gradle.org/creating-new-gradle-builds/
  */
+
+plugins {
+    id 'checkstyle'
+}
+
 apply plugin: 'java'
 
 apply plugin: "jacoco"
