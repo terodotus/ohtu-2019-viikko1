@@ -16,6 +16,9 @@
 		<module name="NestedIfDepth">
 		  <property name="max" value="1"/>
 		</module>
+		<module name="CyclomaticComplexity">		
+		  <property name="max" value="15"/>
+		</module>
         
 
 	</module>
