@@ -17,7 +17,7 @@
 		  <property name="max" value="1"/>
 		</module>
 		<module name="CyclomaticComplexity">		
-		  <property name="max" value="15"/>
+		  <property name="max" value="3"/>
 		</module>
         
 
